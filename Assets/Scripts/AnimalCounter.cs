@@ -1,21 +1,26 @@
 using System;
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class AnimalCounter : MonoBehaviour
 {
-    public event Action Increased;
-
     [SerializeField] private InputSystem _inputSystem;
-    
+
     [SerializeField] private float _delay;
 
     private bool _isCounting;
     private int _animalCount;
     private Coroutine _animalCounterCoroutine;
+    private WaitForSeconds _waitForSeconds;
+
+    public event Action Increased;
 
     public int AnimalCount => _animalCount;
+
+    private void Awake()
+    {
+        _waitForSeconds = new WaitForSeconds(_delay);
+    }
 
     private void OnEnable()
     {
@@ -45,7 +50,7 @@ public class AnimalCounter : MonoBehaviour
     {
         while (_animalCount < int.MaxValue)
         {
-            yield return new WaitForSeconds(_delay);
+            yield return _waitForSeconds;
 
             _animalCount++;
             Increased?.Invoke();
