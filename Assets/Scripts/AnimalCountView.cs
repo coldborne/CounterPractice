@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class AnimalCountView : MonoBehaviour
 {
     [SerializeField] private AnimalCounter _animalCounter;
+    [SerializeField] private TextMeshProUGUI _counterText;
 
     private void OnEnable()
     {
@@ -16,6 +18,9 @@ public class AnimalCountView : MonoBehaviour
 
     private void Show()
     {
-        Debug.Log("Количество спасенных собак: " + _animalCounter.AnimalCount);
+        int animalCount = _animalCounter.AnimalCount;
+
+        if (_counterText != null)
+            _counterText.text = $"Количество спасенных животных: {animalCount}";
     }
 }

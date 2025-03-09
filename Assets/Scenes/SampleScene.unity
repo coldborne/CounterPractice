@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 1210656620}
   - component: {fileID: 1210656622}
   - component: {fileID: 1210656621}
+  - component: {fileID: 1210656623}
   m_Layer: 5
   m_Name: Dog
   m_TagString: Untagged
@@ -467,8 +468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -512, y: 127.999985}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: -512, y: 115}
+  m_SizeDelta: {x: 256, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210656621
 MonoBehaviour:
@@ -508,6 +509,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210656619}
   m_CullTransparentMesh: 1
+--- !u!114 &1210656623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210656619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d63f8c9e20e3043b1fdde27e2b48e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animalCounter: {fileID: 2072512372}
+  _counterText: {fileID: 1746648373}
 --- !u!1 &1324248360
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _screen: {fileID: 1726760403}
-  _inputSystem: {fileID: 409207477}
+  _animalCounter: {fileID: 2072512372}
   _animals:
   - {fileID: 902113397}
   - {fileID: 664675024}
@@ -944,8 +959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 180}
-  m_SizeDelta: {x: 256, y: 104}
+  m_AnchoredPosition: {x: 30, y: 180}
+  m_SizeDelta: {x: 317, y: 129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2040129529
 GameObject:
@@ -1052,8 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputSystem: {fileID: 409207477}
-  _counterText: {fileID: 1746648373}
-  _delay: 0
+  _delay: 1
 --- !u!4 &2072512373
 Transform:
   m_ObjectHideFlags: 0

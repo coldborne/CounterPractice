@@ -8,7 +8,7 @@ public class AnimalCounter : MonoBehaviour
     public event Action Increased;
 
     [SerializeField] private InputSystem _inputSystem;
-    [SerializeField] private TextMeshProUGUI _counterText;
+    
     [SerializeField] private float _delay;
 
     private bool _isCounting;
@@ -49,9 +49,6 @@ public class AnimalCounter : MonoBehaviour
 
             _animalCount++;
             Increased?.Invoke();
-
-            if (_counterText != null)
-                _counterText.text = _animalCount.ToString();
         }
     }
 }
